@@ -5,7 +5,7 @@ resource "aws_eip" "eip" {
   tags = merge(
     var.tags,
     {
-      Name = "${var.project_name}-eip-${count.index}"
+      Name = "${var.project_name}-eip-${count.index + 1}"
     }
   )
 }

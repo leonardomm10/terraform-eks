@@ -7,7 +7,7 @@ resource "aws_nat_gateway" "nat_gateway" {
   tags = merge(
     var.tags,
     {
-      Name = "${var.project_name}-ngw-${count.index}"
+      Name = "${var.project_name}-ngw-${count.index + 1}"
     }
   )
 }
