@@ -10,12 +10,6 @@ variable "aws_region" {
   nullable    = false
 }
 
-variable "aws_vpc_name" {
-  description = "The name of the VPC to be created in AWS"
-  type        = string
-  nullable    = false
-}
-
 variable "aws_vpc_cidr" {
   description = "The CIDR block for the VPC"
   type        = string
@@ -37,12 +31,6 @@ variable "aws_vpc_private_subnets" {
 variable "aws_vpc_public_subnets" {
   description = "The public subnets within the VPC"
   type        = list(string)
-  nullable    = false
-}
-
-variable "aws_eks_name" {
-  description = "The name of the EKS cluster"
-  type        = string
   nullable    = false
 }
 
